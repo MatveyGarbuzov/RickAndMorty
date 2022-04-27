@@ -15,13 +15,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let model = CharacterViewController.Model(
-            statusModel: .init(key: "Some", value: "Value"),
-            name: "Rick",
-            imageURL: URL(string: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")!
-        )
-        let navigationController = UINavigationController(rootViewController: CharacterViewController(model: model))
-        window.rootViewController = navigationController
+//        let model = CharacterViewController.Model(
+//            statusModel: .init(key: "Some", value: "Value"),
+//            name: "Rick",
+//            imageURL: URL(string: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")!
+//        )
+//        let navigationController = UINavigationController(rootViewController: CharacterViewController(model: model))
+//        window.rootViewController = navigationController
+        window.rootViewController = SearchViewController()
         window.makeKeyAndVisible()
         self.window = window
     }
