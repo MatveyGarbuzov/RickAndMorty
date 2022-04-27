@@ -21,10 +21,9 @@ final class SearchViewController: UIViewController {
     
     private let searchField: CustomTextField = {
         // Paddings for searchIcon
-        let leftPadding  = 12
-        let rightPadding = 6
-        let width        = 28
-        let height       = 28
+        let leftPadding = 12
+        let width       = 28
+        let height      = 28
         
         let searchIconView: UIImageView = {
             let ret = UIImageView(image: UIImage(named: "searchIcon"))
@@ -35,7 +34,6 @@ final class SearchViewController: UIViewController {
                 height: height
             )
             ret.tintColor = .main
-            
             return ret
         }()
         
@@ -44,12 +42,11 @@ final class SearchViewController: UIViewController {
                 frame: CGRect(
                     x: 0,
                     y: 0,
-                    width: leftPadding + width + rightPadding,
+                    width: leftPadding + width,
                     height: height
                 )
             )
             ret.addSubview(searchIconView)
-            
             return ret
         }()
         
@@ -64,7 +61,7 @@ final class SearchViewController: UIViewController {
         ret.backgroundColor = .BG
         ret.tintColor = .white
         ret.attributedPlaceholder = NSAttributedString(
-            string: " Search for character",
+            string: "  Search for character",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.secondary as Any]
         )
         

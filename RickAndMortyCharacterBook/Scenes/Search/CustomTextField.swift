@@ -9,10 +9,10 @@ import UIKit
 
 class CustomTextField: UITextField {
     var textPadding = UIEdgeInsets(
-        top: 10,
-        left: 0,
-        bottom: 10,
-        right: 20
+        top: 13,
+        left: 6,
+        bottom: 13,
+        right: 12
     )
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -26,7 +26,7 @@ class CustomTextField: UITextField {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("123")
+        print("TextField touched")
     }
 }
 
