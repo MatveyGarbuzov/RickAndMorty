@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     static let main = UIColor(named: "Main")!
-    static let secondary = UIColor(named: "Secondary")
-    static let greyBG = UIColor(named: "Grey BG")
-    static let BG = UIColor(named: "BG")
+    static let secondary = UIColor(named: "Secondary")!
+    static let bg = UIColor(named: "BG")!
+    static let greybg = UIColor(named: "Grey BG")!
 }

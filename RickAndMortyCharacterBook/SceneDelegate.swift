@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        )
 //        let navigationController = UINavigationController(rootViewController: CharacterViewController(model: model))
 //        window.rootViewController = navigationController
-        window.rootViewController = SearchViewController()
+        window.rootViewController = RootViewController()
+//        window.rootViewController = deps.screen
         window.makeKeyAndVisible()
         self.window = window
     }
@@ -37,6 +38,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidEnterBackground(_ scene: UIScene) { }
     
-    
+//    private let deps = DependenciesHolder()
 }
 
+//final class DependenciesHolder: RootViewControllerDepencencies {
+////    lazy var screenFactory: ScreenFactory = {
+////
+////    }
+//
+//    lazy var rootScreenFactory: RootScreenFactory = {
+//        struct Deps: RootViewControllerDepencencies {
+//            let screenFactory: ScreenFactory
+//        }
+//        let deps = Deps(screenFactory: screenFactory)
+//        return RootScreenFactory(deps: deps)
+//    }()
+//}
+//
+//final class RootScreenFactory {
+//    init(deps: RootViewControllerDepencencies) {
+//
+//    }
+//
+//    func makeRootViewController() -> UIViewController {
+//        return RootViewController(deps: deps)
+//    }
+//
+//    private let deps: RootViewControllerDepencencies
+//}
